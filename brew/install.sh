@@ -20,7 +20,7 @@ install_brew() {
   brew update && brew upgrade
 
   echo -e "\033[1;32mInstalling some $name basics...\033[0m"
-  brew install cask dockutil rsync thefuck
+  brew install cask coreutils dockutil findutils moreutils rsync thefuck
 
   echo -e "\033[1;32mFinished installing $name\033[0m"
 }

@@ -6,6 +6,8 @@ for file in ~/.{aliases,path}; do
 done
 unset file
 
+export EDITOR="atom"
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
