@@ -14,6 +14,9 @@ install_apps() {
 
   # Spotify
   brew cask install spotify spotify-notifications
+
+  # WhatsApp
+  brew cask install whatsapp
   echo -e "\033[1;32mFinished installing other apps\033[0m"
   echo ""
 }
