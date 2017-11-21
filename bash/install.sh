@@ -24,8 +24,4 @@ update_bash() {
   echo ""
 }
 
-# iTerm
-
-
-
 update_bash
