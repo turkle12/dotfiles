@@ -3,14 +3,7 @@
 set -euf -o pipefail
 
 function doIt() {
-  ./brew/install.sh
-  ./bash/install.sh
-  ./git/install.sh
-  ./atom/install.sh
-  ./dev-tools/install.sh
-  ./apps/install.sh
-
-  # Install files
+  # Install dotfiles before anything else, so we can write to them if need be.
   echo -e "\033[1;32mInstalling dotfiles...\033[0m";
   echo "";
   rsync --exclude ".git" \
@@ -26,6 +19,14 @@ function doIt() {
         --exclude "LICENSE.md" \
         --exclude "README.md" \
         -avh --no-perms . ~;
+
+  # Run install scripts...
+  ./brew/install.sh
+  ./bash/install.sh
+  ./git/install.sh
+  ./atom/install.sh
+  ./dev-tools/install.sh
+  ./apps/install.sh
 
   echo -e "\033[1;32mConfiguring OS...\033[0m";
   echo "";

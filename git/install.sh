@@ -12,6 +12,18 @@ install_git() {
 
   echo -e "\033[1;32mFinished installing $name\033[0m"
   echo ""
+
+  echo -e "\033[1;32mSetting Git creds...\033[0m"
+
+  read -p "What is your Git username? "
+  git config --global user.name $REPLY
+
+  read -p "What is your Git email? "
+  git config --global user.email $REPLY
+
+  echo -e "\033[1;32mFinished setting Git creds\033[0m"
+  echo ""
+
 }
 
 install_git
