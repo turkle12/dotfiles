@@ -67,6 +67,9 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
+# Set Fliqlo as the screensaver
+defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName Fliqlo path ~/Library/Screen\ Savers/Fliqlo.saver type 0
+
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################

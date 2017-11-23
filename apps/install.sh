@@ -9,6 +9,9 @@ install_apps() {
   # Basic app
   brew cask install appcleaner
 
+  # Fliqlo clock screensaver
+  brew cask install fliqlo
+
   # Google Stuff
   brew cask install google-chrome google-backup-and-sync
 
