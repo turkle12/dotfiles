@@ -14,7 +14,6 @@ set_file_associations() {
   echo -e "\033[1;32mSetting file associations...\033[0m"
 
   if ! is_duti_installed; then
-    echo -e "\033[1;32mInstalling duti...\033[0m"
     brew install duti
   fi
 
