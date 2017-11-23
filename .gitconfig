@@ -1,16 +1,20 @@
 [core]
-  editor = atom --wait
   autocrlf = input
-  safecrlf = true
-  quotepath = false
+  editor = atom --wait
   excludesFile = ~/.gitignore_global
+  quotepath = false
+  safecrlf = true
 [alias]
-  co = checkout
-  ci = commit
-  st = status
   br = branch
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  type = cat-file -t
+  ch = checkout
+  co = commit
   dump = cat-file -p
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  st = status
+  type = cat-file -t
 [push]
   default = current
+[gitflow "release.finish"]
+	message = Release %tag%
+[gitflow "hotfix.finish"]
+	message = Hotfix %tag%
