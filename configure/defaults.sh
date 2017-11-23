@@ -56,6 +56,9 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Set scrolling to not use Apple's 'natural' scrolling
+defaults write -g com.apple.swipescrolldirection -bool false
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
