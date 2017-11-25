@@ -15,10 +15,10 @@ install_git() {
 
   echo -e "\033[1;32mSetting Git creds...\033[0m"
 
-  read -p "What is your Git username? "
+  read -p "What do you want to set as your global Git name? "
   git config --global user.name $REPLY
 
-  read -p "What is your Git email? "
+  read -p "What do you want to set as your global Git email? "
   git config --global user.email $REPLY
 
   echo -e "\033[1;32mFinished setting Git creds\033[0m"
