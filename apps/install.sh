@@ -18,9 +18,6 @@ install_apps() {
   # Spotify
   brew cask install spotify spotify-notifications
 
-  # VirtualBox
-  brew cask install virtualbox
-
   # WhatsApp
   brew cask install whatsapp
 

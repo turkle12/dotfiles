@@ -43,6 +43,12 @@ install_dev_tools() {
     curl -L https://get.rvm.io | bash -s stable
   fi
 
+  # Ngrok
+  brew cask install ngrok
+
+  # VirtualBox
+  brew cask install virtualbox
+
   echo -e "\033[1;32mFinished installing dev tools\033[0m"
   echo ""
 }
