@@ -59,6 +59,9 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Set scrolling to not use Apple's 'natural' scrolling
 defaults write -g com.apple.swipescrolldirection -bool false
 
+# Set Google Chrome to not use sideswipe nav
+defaults write com.google.Chrome.plist AppleEnableSwipeNavigateWithScrolls -bool false
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
