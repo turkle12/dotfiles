@@ -24,6 +24,12 @@ install_git() {
   echo -e "\033[1;32mFinished setting Git creds\033[0m"
   echo ""
 
+  if [ ! -d ~/.git/git-flow-hooks ]; then
+    echo -e "\033[1;32mGrabbing Git Flow Hooks...\033[0m"
+    git clone git@github.com:jaspernbrouwer/git-flow-hooks.git ~/.git
+    echo -e "\033[1;32mFinished configuring Git Flow Hooks\033[0m"
+    echo ""
+  fi
 }
 
 install_git
