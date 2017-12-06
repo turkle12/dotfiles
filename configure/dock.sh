@@ -25,6 +25,7 @@ set_dock_items() {
 
   dockutil --add /Applications/Atom.app
   dockutil --add /Applications/Sourcetree.app
+  dockutil --add /Applications/PSequel.app
   dockutil --add /Applications/iTerm.app
 
   dockutil --add /Applications/Mail.app
@@ -33,10 +34,12 @@ set_dock_items() {
   dockutil --add /Applications/Wunderlist.app
   dockutil --add /Applications/Slack.app
   dockutil --add /Applications/Messages.app
+  dockutil --add /Applications/WhatsApp.app
 
   dockutil --add '/Applications' --view grid --display folder
   dockutil --add '~/Downloads' --view grid --display folder
   dockutil --add '~/Workspace' --view grid --display folder
+
   echo -e "\033[1;32mFinished setting dock items.\033[0m"
   echo ""
 }

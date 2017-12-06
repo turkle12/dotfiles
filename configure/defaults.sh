@@ -113,8 +113,11 @@ defaults write com.apple.dock launchanim -bool false
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
 
-# Automatically hide and show the Dock
-defaults write com.apple.dock autohide -bool true
+# Don't autohide the dock
+defaults write com.apple.dock autohide -bool false
+
+# Set docks tilesize
+defaults write com.apple.dock tilesize -int 30
 
 ###############################################################################
 # Safari & WebKit                                                             #
