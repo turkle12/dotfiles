@@ -16,7 +16,6 @@ alias w="cd ~/Workspace"
 
 # Cmds
 alias g="git"
-alias bunmit='bundle update && rake test && git add . && git commit -m "Gem update" && git push'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
