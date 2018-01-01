@@ -36,9 +36,8 @@ set_dock_items() {
   dockutil --add /Applications/Messages.app
   dockutil --add /Applications/WhatsApp.app
 
-  dockutil --add '/Applications' --view grid --display folder
-  dockutil --add '~/Downloads' --view grid --display folder
-  dockutil --add '~/Workspace' --view grid --display folder
+  dockutil --add /Applications --view grid --display folder --sort name
+  dockutil --add '~/Downloads' --view grid --display folder --sort name
 
   echo -e "\033[1;32mFinished setting dock items.\033[0m"
   echo ""
