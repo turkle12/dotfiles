@@ -47,11 +47,11 @@ install_dev_tools() {
 
   rvm @global do gem install awesome_print
   GEM_NAME="awesome_print"
-  grep -qF "$GEM_NAME" "$GEMS_FILE" || echo "$GEM_NAME" >> "$GEMS_FILE"
+  grep -w "$GEM_NAME" "$GEMS_FILE" || echo "$GEM_NAME" >> "$GEMS_FILE"
 
   rvm @global do gem install bundler
   GEM_NAME="bundler"
-  grep -qF "$GEM_NAME" "$GEMS_FILE" || echo "$GEM_NAME" >> "$GEMS_FILE"
+  grep -w "\A$GEM_NAME" "$GEMS_FILE" || echo "$GEM_NAME" >> "$GEMS_FILE"
 
   # Ngrok
   brew cask install ngrok
