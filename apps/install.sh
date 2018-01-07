@@ -9,6 +9,9 @@ install_apps() {
   # Appcleaner - Good for tiding up after removing an app
   brew cask install appcleaner
 
+  # Avira Antivirus
+  brew cask install avira-antivirus
+
   # Boxcryptor - Cloud file encryption
   # NOTE: Need to use --force if already installed...
   brew cask install boxcryptor --force
