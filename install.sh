@@ -30,12 +30,8 @@ function doIt() {
 
   echo -e "\033[1;32mConfiguring OS...\033[0m";
   echo "";
-  ./configure/software-update.sh
-  ./configure/filevault.sh
   ./configure/defaults.sh
-  ./configure/umask.sh
   ./configure/dock.sh
-  # ./configure/login-items.sh
 
   source ~/.bash_profile;
 }

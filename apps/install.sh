@@ -6,30 +6,22 @@ install_apps() {
   local name="Bash"
 
   echo -e "\033[1;32mInstalling other apps...\033[0m"
-  # Appcleaner - Good for tiding up after removing an app
-  brew cask install appcleaner
-
-  # Avira Antivirus
-  brew cask install avira-antivirus
-
-  # Boxcryptor - Cloud file encryption
-  # NOTE: Need to use --force if already installed...
-  brew cask install boxcryptor --force
-
-  # Fliqlo clock screensaver
-  brew cask install fliqlo
 
   # Google Stuff
-  brew cask install google-chrome google-backup-and-sync
-
-  # Paragon - for NTFS read/write, requires account
-  brew cask install paragon-ntfs
+  # brew cask install google-chrome google-backup-and-sync
 
   # Spotify
   brew cask install spotify spotify-notifications
 
-  # WhatsApp
-  brew cask install whatsapp
+  # Firefox
+  brew cask install firefox
+
+  # Evernote
+  brew cask install evernote
+
+  # Slack
+  # brew cask install slack
+
 
   echo -e "\033[1;32mFinished installing other apps\033[0m"
   echo ""

@@ -17,7 +17,7 @@ update_bash() {
   # Change the shell for the user
   chsh -s /usr/local/bin/bash
 
-  # Add iTerm shell intgrations
+  # Add iTerm shell integrations
   curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
 
   echo -e "\033[1;32mFinished updating Bash and installing iTerm2\033[0m"

@@ -2,13 +2,13 @@
   pushNonFastForward = false
 	statusHints = false
 [alias]
-  br = branch
-  ch = checkout
-  co = commit
-  dump = cat-file -p
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  st = status
-  type = cat-file -t
+  # br = branch
+  # ch = checkout
+  # co = commit
+  # dump = cat-file -p
+  # hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  # st = status
+  # type = cat-file -t
 [branch]
 	autosetupmerge = true
 [color]
@@ -21,15 +21,15 @@
   safecrlf = true
   whitespace = trailing-space,space-before-tab
 [diff]
-	renames = copies
-	mnemonicprefix = true
+	# renames = copies
+	# mnemonicprefix = true
 [gitflow "hotfix.finish"]
   message = Hotfix %tag%
 [gitflow "release.finish"]
   message = Release %tag%
 [merge]
-	stat = true
+	# stat = true
 [push]
-  default = current
+  # default = current
 [rerere]
-	enabled = true
+	# enabled = true

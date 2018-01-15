@@ -18,10 +18,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-read -p "What do you want you computer name to be? " -n 40;
-sudo scutil --set ComputerName $REPLY
-sudo scutil --set HostName $REPLY
-sudo scutil --set LocalHostName $REPLY
+# read -p "What do you want you computer name to be? " -n 40;
+# sudo scutil --set ComputerName $REPLY
+# sudo scutil --set HostName $REPLY
+# sudo scutil --set LocalHostName $REPLY
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -73,8 +73,6 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
-# Set Fliqlo as the screensaver
-defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName Fliqlo path ~/Library/Screen\ Savers/Fliqlo.saver type 0
 
 ###############################################################################
 # Finder                                                                      #
@@ -85,8 +83,8 @@ defaults write com.apple.finder QuitMenuItem -bool true
 
 # Set Desktop as the default location for new Finder windows
 # For other paths, use `PfLo` and `file:///full/path/here/`
-defaults write com.apple.finder NewWindowTarget -string "PfLo"
-defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+# defaults write com.apple.finder NewWindowTarget -string "PfLo"
+# defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
 
 # Finder: show hidden files by default
 defaults write com.apple.finder AppleShowAllFiles -bool true
@@ -96,7 +94,7 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Use column view in all Finder windows by default
 # Four-letter codes for the view modes: `icnv`, `Nlsv`, `clmv`, `Flwv`
-defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+# defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
@@ -117,7 +115,7 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 defaults write com.apple.dock autohide -bool false
 
 # Set docks tilesize
-defaults write com.apple.dock tilesize -int 30
+# defaults write com.apple.dock tilesize -int 30
 
 ###############################################################################
 # Safari & WebKit                                                             #

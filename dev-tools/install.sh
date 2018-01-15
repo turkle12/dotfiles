@@ -35,29 +35,24 @@ install_dev_tools() {
   if ! is_pg_installed; then
     echo -e "\033[1;32mInstalling Postgres...\033[0m"
     brew install postgres
-    brew services start postgresql
+    # brew services start postgresql
   fi
 
-  if ! is_rvm_installed; then
-    echo -e "\033[1;32mInstalling RVM...\033[0m"
-    curl -L https://get.rvm.io | bash -s stable
-  fi
+  # if ! is_rvm_installed; then
+    # echo -e "\033[1;32mInstalling RVM...\033[0m"
+    # curl -L https://get.rvm.io | bash -s stable
+  # fi
 
-  GEMS_FILE=~/.rvm/gemsets/global.gems
+  # GEMS_FILE=~/.rvm/gemsets/global.gems
 
-  rvm @global do gem install awesome_print
-  GEM_NAME="awesome_print"
-  grep -w "$GEM_NAME" "$GEMS_FILE" || echo "$GEM_NAME" >> "$GEMS_FILE"
+  # rvm @global do gem install awesome_print
+  # GEM_NAME="awesome_print"
+  # grep -w "$GEM_NAME" "$GEMS_FILE" || echo "$GEM_NAME" >> "$GEMS_FILE"
 
-  rvm @global do gem install bundler
-  GEM_NAME="bundler"
-  grep -w "\A$GEM_NAME" "$GEMS_FILE" || echo "$GEM_NAME" >> "$GEMS_FILE"
+  # rvm @global do gem install bundler
+  # GEM_NAME="bundler"
+  # grep -w "\A$GEM_NAME" "$GEMS_FILE" || echo "$GEM_NAME" >> "$GEMS_FILE"
 
-  # Ngrok
-  brew cask install ngrok
-
-  # VirtualBox
-  brew cask install virtualbox
 
   echo -e "\033[1;32mFinished installing dev tools\033[0m"
   echo ""

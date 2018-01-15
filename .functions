@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-function bunmit() {
-  echo -e "\033[1;32mChecking gems to update...\033[0m"
-  bundle update && rake test && git add Gemfile Gemfile.lock && git commit -m "Gem update" && git push
-  echo -e "\033[1;32mUpdate done\033[0m"
-}
-
 function gitcleanup() {
   echo -e "\033[1;32mRunning cleanup of remote Git repos...\033[0m"
   git fetch -p && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d | git fetch -p

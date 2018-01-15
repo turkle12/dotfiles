@@ -14,27 +14,29 @@ set_dock_items() {
     brew install dockutil
   fi
 
-  dockutil --remove all
+  # dockutil --remove all
+  dockutil --remove Launchpad --no-restart
+  dockutil --remove Messages --no-restart
+  dockutil --remove Notes --no-restart
+  dockutil --remove Mail --no-restart
+  dockutil --remove Contacts --no-restart
+  dockutil --remove Maps --no-restart
+  dockutil --remove FaceTime --no-restart
+  dockutil --remove Photo\ Booth --no-restart
+  dockutil --remove iTunes --no-restart
+  dockutil --remove iBooks --no-restart
 
-  dockutil --add /Applications/System\ Preferences.app
-  dockutil --add /Applications/App\ Store.app
+  # dockutil --add /Applications/System\ Preferences.app
+  # dockutil --add /Applications/App\ Store.app
 
-  dockutil --add /Applications/1Password.app
-  dockutil --add /Applications/Spotify.app
   dockutil --add /Applications/Google\ Chrome.app
 
   dockutil --add /Applications/Atom.app
-  dockutil --add /Applications/Sourcetree.app
-  dockutil --add /Applications/PSequel.app
   dockutil --add /Applications/iTerm.app
 
-  dockutil --add /Applications/Mail.app
-  dockutil --add /Applications/Contacts.app
   dockutil --add /Applications/Calendar.app
-  dockutil --add /Applications/Wunderlist.app
   dockutil --add /Applications/Slack.app
-  dockutil --add /Applications/Messages.app
-  dockutil --add /Applications/WhatsApp.app
+  dockutil --add /Applications/Spotify.app
 
   dockutil --add /Applications --view grid --display folder --sort name
   dockutil --add '~/Downloads' --view grid --display folder --sort name
